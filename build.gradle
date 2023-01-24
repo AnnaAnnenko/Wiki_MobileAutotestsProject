@@ -19,20 +19,19 @@ def allureVersion = "2.19.0",
     ownerVersion = "1.0.12"
 
 
-allure
-        {
-            report {
-                version.set(allureVersion)
-            }
-            adapter {
-                aspectjWeaver.set(true)
-                frameworks {
-                    junit5 {
-                        adapterVersion.set(allureVersion)
-                    }
-                }
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
             }
         }
+    }
+}
 
 dependencies {
     testImplementation(
